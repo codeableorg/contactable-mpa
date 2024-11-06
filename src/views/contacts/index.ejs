@@ -1,0 +1,50 @@
+<div class="mb-6">
+  <form action="/" method="GET" class="flex gap-2">
+    <input
+      type="text"
+      name="search"
+      value="<%= locals.search || '' %>"
+      placeholder="Search contacts..."
+      class="flex-1 p-2 border rounded-lg"
+    />
+    <button
+      type="submit"
+      class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-600/90"
+    >
+      Search
+    </button>
+  </form>
+</div>
+
+<% if (contacts.length === 0) { %>
+<div class="text-center py-10">
+  <p class="text-gray-500">No contacts found</p>
+</div>
+<% } else { %>
+<div class="grid grid-cols-1 gap-4">
+  <% contacts.forEach(contact => { %>
+  <div
+    class="bg-white rounded-lg shadow-sm p-4 flex items-center justify-between"
+  >
+    <div class="flex items-center gap-4">
+      <img
+        src="<%= contact.avatarUrl || `https://ui-avatars.com/api/?name=${contact.firstName}+${contact.lastName}` %>"
+        alt="<%= `${contact.firstName} ${contact.lastName}` %>"
+        class="w-12 h-12 rounded-full"
+      />
+      <a href="/contacts/<%= contact.id %>" class="hover:text-indigo-600">
+        <%= `${contact.firstName} ${contact.lastName}` %>
+      </a>
+    </div>
+    <form action="/contacts/<%= contact.id %>/toggle-favorite" method="POST">
+      <button
+        type="submit"
+        class="text-yellow-500 flex justify-center items-center pb-1"
+      >
+        <span class="text-3xl"><%= contact.isFavorite ? '★' : '☆' %></span>
+      </button>
+    </form>
+  </div>
+  <% }) %>
+</div>
+<% } %>

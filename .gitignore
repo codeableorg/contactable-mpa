@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+
+# Output directories
+dist/
+
+# Environment variables
+.env
+
+# IDEs and editors
+.vscode/

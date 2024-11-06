@@ -1,0 +1,38 @@
+{
+  "name": "contactable-mpa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"nodemon\" \"npm run css:watch\"",
+    "build": "tsc && npm run css:build && npm run copy-assets",
+    "start": "node dist/index.js",
+    "css:build": "tailwindcss -i ./src/public/css/style.css -o ./src/public/css/output.css --minify",
+    "css:watch": "tailwindcss -i ./src/public/css/style.css -o ./src/public/css/output.css --watch",
+    "copy-assets": "mkdir -p dist/data dist/views dist/public && cp -r src/data/contacts.json dist/data/ && cp -r src/views/* dist/views/ && cp -r src/public/* dist/public/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-ejs-layouts": "^2.5.1",
+    "method-override": "^3.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.0",
+    "@types/express-ejs-layouts": "^2.5.4",
+    "@types/method-override": "^0.0.35",
+    "@types/node": "^22.9.0",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

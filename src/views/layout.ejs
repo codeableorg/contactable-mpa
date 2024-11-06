@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactable</title>
+    <link rel="stylesheet" href="/css/output.css" />
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <header>
+      <nav class="max-w-screen-sm mx-auto px-4 py-4">
+        <div class="flex justify-between items-center flex-wrap gap-2">
+          <a href="/" class="text-2xl font-bold">Contactable</a>
+          <div class="flex gap-4 items-center justify-end flex-grow">
+            <a href="/favorites" class="hover:text-indigo-600">Favorites</a>
+            <a
+              href="/new"
+              class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-600/90 flex-shrink-0"
+              >New Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-screen-sm mx-auto px-4 py-8"><%- body %></main>
+  </body>
+</html>

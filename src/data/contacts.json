@@ -1,0 +1,68 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe2",
+      "email": "john@example.com",
+      "avatarUrl": "",
+      "isFavorite": true
+    },
+    {
+      "firstName": "Diego",
+      "lastName": "Torres",
+      "email": "diego@codeable.la",
+      "avatarUrl": "",
+      "id": "1730823583717",
+      "isFavorite": false
+    },
+    {
+      "firstName": "Testino",
+      "lastName": "Diprueba",
+      "email": "testino@mail.com",
+      "avatarUrl": "",
+      "id": "1730871264523",
+      "isFavorite": false
+    },
+    {
+      "firstName": "Gonzalo",
+      "lastName": "Perez",
+      "email": "gonzalo@mail.com",
+      "avatarUrl": "",
+      "id": "1730871322460",
+      "isFavorite": true
+    },
+    {
+      "firstName": "Sebastian",
+      "lastName": "Jimenez",
+      "email": "sebas@mail.com",
+      "avatarUrl": "",
+      "id": "1730871357752",
+      "isFavorite": false
+    },
+    {
+      "firstName": "Estefania",
+      "lastName": "Perales",
+      "email": "estef@mail.com",
+      "avatarUrl": "",
+      "id": "1730871377310",
+      "isFavorite": false
+    },
+    {
+      "firstName": "Luana",
+      "lastName": "Banana",
+      "email": "luana@mail.com",
+      "avatarUrl": "",
+      "id": "1730871410138",
+      "isFavorite": false
+    },
+    {
+      "firstName": "Susana",
+      "lastName": "Suarez",
+      "email": "susana@mail.com",
+      "avatarUrl": "",
+      "id": "1730871458795",
+      "isFavorite": false
+    }
+  ]
+}

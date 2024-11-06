@@ -1,0 +1,71 @@
+<div class="max-w-lg mx-auto">
+  <h1 class="text-2xl font-bold mb-6">New Contact</h1>
+
+  <% if (locals.error) { %>
+  <div
+    class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4"
+  >
+    <%= error %>
+  </div>
+  <% } %>
+
+  <form action="/contacts" method="POST" class="space-y-4">
+    <div>
+      <label class="block text-gray-700 mb-2">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        required
+        class="w-full p-2 border rounded-lg"
+        value="<%= locals.data?.firstName || '' %>"
+      />
+    </div>
+
+    <div>
+      <label class="block text-gray-700 mb-2">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        required
+        class="w-full p-2 border rounded-lg"
+        value="<%= locals.data?.lastName || '' %>"
+      />
+    </div>
+
+    <div>
+      <label class="block text-gray-700 mb-2">Email</label>
+      <input
+        type="email"
+        name="email"
+        required
+        class="w-full p-2 border rounded-lg"
+        value="<%= locals.data?.email || '' %>"
+      />
+    </div>
+
+    <div>
+      <label class="block text-gray-700 mb-2">Avatar URL (optional)</label>
+      <input
+        type="url"
+        name="avatarUrl"
+        class="w-full p-2 border rounded-lg"
+        value="<%= locals.data?.avatarUrl || '' %>"
+      />
+    </div>
+
+    <div class="flex gap-2">
+      <button
+        type="submit"
+        class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-600/90"
+      >
+        Create Contact
+      </button>
+      <a
+        href="/"
+        class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+      >
+        Cancel
+      </a>
+    </div>
+  </form>
+</div>
