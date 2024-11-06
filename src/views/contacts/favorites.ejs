@@ -12,7 +12,7 @@
   >
     <div class="flex items-center gap-4">
       <img
-        src="<%= contact.avatarUrl || `https://ui-avatars.com/api/?name=${contact.firstName}+${contact.lastName}` %>"
+        src="<%= contact.avatarUrl || `https://robohash.org/${contact.firstName}+${contact.lastName}.png?set=set3` %>"
         alt="<%= `${contact.firstName} ${contact.lastName}` %>"
         class="w-12 h-12 rounded-full"
       />
