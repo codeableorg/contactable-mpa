@@ -27,3 +27,20 @@
   <% }) %>
 </div>
 <% } %>
+
+<script>
+  async function toggleFavorite(event, contactId) {
+    event.preventDefault();
+    const response = await fetch(`/contacts/${contactId}/toggle-favorite`, {
+      method: "POST",
+    });
+
+    if (response.ok) {
+      const button = event.target.querySelector("button");
+      const isFavorite = button.innerText === "★";
+      button.innerText = isFavorite ? "☆" : "★";
+    } else {
+      console.error("Failed to toggle favorite");
+    }
+  }
+</script>

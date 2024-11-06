@@ -11,12 +11,17 @@
       <%= `${contact.firstName} ${contact.lastName}` %>
     </a>
   </div>
-  <form action="/contacts/<%= contact.id %>/toggle-favorite" method="POST">
+  <form
+    data-contact-id="<%= contact.id %>"
+    action="/contacts/<%= contact.id %>/toggle-favorite"
+    method="POST"
+    onsubmit="toggleFavorite(event, '<%= contact.id %>')"
+  >
     <button
       type="submit"
-      class="text-yellow-500 flex justify-center items-center pb-1"
+      class="text-yellow-500 flex justify-center items-center pb-1 text-3xl"
     >
-      <span class="text-3xl"><%= contact.isFavorite ? '★' : '☆' %></span>
+      <%= contact.isFavorite ? '★' : '☆' %>
     </button>
   </form>
 </div>

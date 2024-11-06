@@ -14,7 +14,7 @@
       "email": "diego@codeable.la",
       "avatarUrl": "",
       "id": "1730823583717",
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "firstName": "Testino",
@@ -22,7 +22,7 @@
       "email": "testino@mail.com",
       "avatarUrl": "",
       "id": "1730871264523",
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "firstName": "Gonzalo",

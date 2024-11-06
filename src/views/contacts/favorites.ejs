@@ -11,3 +11,18 @@
   <% }) %>
 </div>
 <% } %>
+
+<script>
+  async function toggleFavorite(event, contactId) {
+    event.preventDefault();
+    const response = await fetch(`/contacts/${contactId}/toggle-favorite`, {
+      method: "POST",
+    });
+
+    if (response.ok) {
+      event.target.parentElement.remove();
+    } else {
+      console.error("Failed to toggle favorite");
+    }
+  }
+</script>
