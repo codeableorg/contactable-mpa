@@ -23,28 +23,7 @@
 <% } else { %>
 <div class="grid grid-cols-1 gap-4">
   <% contacts.forEach(contact => { %>
-  <div
-    class="bg-white rounded-lg shadow-sm p-4 flex items-center justify-between"
-  >
-    <div class="flex items-center gap-4">
-      <img
-        src="<%= contact.avatarUrl || `https://robohash.org/${contact.firstName}+${contact.lastName}.png?set=set3` %>"
-        alt="<%= `${contact.firstName} ${contact.lastName}` %>"
-        class="w-12 h-12 rounded-full"
-      />
-      <a href="/contacts/<%= contact.id %>" class="hover:text-indigo-600">
-        <%= `${contact.firstName} ${contact.lastName}` %>
-      </a>
-    </div>
-    <form action="/contacts/<%= contact.id %>/toggle-favorite" method="POST">
-      <button
-        type="submit"
-        class="text-yellow-500 flex justify-center items-center pb-1"
-      >
-        <span class="text-3xl"><%= contact.isFavorite ? '★' : '☆' %></span>
-      </button>
-    </form>
-  </div>
+  <%- include('_contact', { contact: contact }) %>
   <% }) %>
 </div>
 <% } %>
